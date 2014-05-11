@@ -15,7 +15,7 @@
 ## Load, filter and transform input data
 ################################################################################
 
-HHPowerConsumptionData <-read.table("household_power_consumption.txt",header=TRUE,sep=";")
+HHPowerConsumptionData <-read.table("household_power_consumption.txt",header=TRUE,sep=";",na.strings="?")
 names(HHPowerConsumptionData)
 filteredHHPowerConsumptionData <- HHPowerConsumptionData[(HHPowerConsumptionData$Date=="1/2/2007")|(HHPowerConsumptionData$Date=="2/2/2007"),]
 filteredHHPowerConsumptionData$Date
